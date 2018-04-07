@@ -4,7 +4,7 @@ set(EXECUTABLE_NAME "Graphs1")
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
-set(CMAKE_CXX_FLAGS_DEBUG "-g -Wall -Wextra -DWX_PRECOMP")
+set(CMAKE_CXX_FLAGS_DEBUG "-g -Wall -Wextra")
 
 include_directories(include/)
 
