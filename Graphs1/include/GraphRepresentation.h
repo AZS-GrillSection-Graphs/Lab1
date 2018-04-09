@@ -10,6 +10,7 @@ class GraphRepresentation
 public:
     virtual void Print() const = 0;
     virtual void Convert() const = 0;
+    virtual ~GraphRepresentation() {}
 };
 
 #endif //LAB1_GRAPHREPRESENTATION_H

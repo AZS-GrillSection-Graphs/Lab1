@@ -5,13 +5,13 @@
 int main(int argc, const char * argv[])
 {
     ////////// Zadanie 1 //////////
-    if(argc == 0)
+    if(argc == 1)
     {
         Graph graph("graphRep.txt");
         graph.Print();
         graph.ConvertGraph();
     }
-    
+
     ////////// Zadanie 3 //////////
     if(argc != 4)
     {
