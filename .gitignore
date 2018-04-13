@@ -1,7 +1,8 @@
 #system files
 .DS_Store
 .directory
-
+cmake-build-debug
+.idea
 
 #C++ gitignore
 # Prerequisites
