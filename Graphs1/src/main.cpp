@@ -2,14 +2,25 @@
 #include "Graph.h"
 #include "RandomGraph.h"
 
+void Draw()
+{
+    std::string drawing = "python3 GraphVisualization.py MacierzIncydencji.txt";
+    system(drawing.c_str());
+}
+
+void Convert(const char * fileName)
+{
+    Graph graph(fileName);
+    graph.ConvertGraph();
+}
+
 int main(int argc, const char * argv[])
 {
     ////////// Zadanie 1 //////////
     if(argc == 1)
     {
-        Graph graph("graphRep.txt");
-        graph.Print();
-        graph.ConvertGraph();
+        Convert("graphRep.txt");
+        Draw();
     }
 
     ////////// Zadanie 3 //////////
@@ -22,6 +33,8 @@ int main(int argc, const char * argv[])
     srand(time(0));
 
     RandomGraph randomGraph(argv[1], argv[2], argv[3]);
+    Convert("MacierzSasiedztwaRandom.txt");
+    Draw();
 
     return 0;
 }
