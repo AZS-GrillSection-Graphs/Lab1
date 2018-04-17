@@ -4,7 +4,7 @@
 
 void Draw()
 {
-    std::string drawing = "python3 GraphVisualization.py MacierzIncydencji.txt";
+    std::string drawing = "python3 GraphVisualizationBeta.py MacierzIncydencji.txt";
     system(drawing.c_str());
 }
 
