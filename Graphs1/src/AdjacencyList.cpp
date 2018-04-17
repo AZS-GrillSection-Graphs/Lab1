@@ -9,7 +9,6 @@ AdjacencyList::AdjacencyList(std::ifstream &inputFile) : m_numOfVer(0)
     while(getline(inputFile, line))
     {
         ++m_numOfVer;
-        m_numberOfLinks.push_back(0);
 
         std::istringstream streamLine(line);
         std::vector<int> col;
@@ -23,7 +22,6 @@ AdjacencyList::AdjacencyList(std::ifstream &inputFile) : m_numOfVer(0)
                 break;
 
             col.push_back(value);
-            m_numberOfLinks[m_numOfVer - 1] += 1;
         }
 
         m_adjList.push_back(col);
@@ -34,7 +32,7 @@ void AdjacencyList::Print() const
 {
     for(int i = 0; i < m_numOfVer; ++i)
     {
-        for(int j = 0; j < m_numberOfLinks[i]; ++j)
+        for(int j = 0; j < m_adjList[i].size(); ++j)
         {
             std::cout << m_adjList[i][j] << " ";
         }
@@ -73,7 +71,7 @@ void AdjacencyList::Convert() const
 
     for(int i = 0; i < m_numOfVer; ++i)
     {
-        for(int j = 0; j < m_numberOfLinks[i]; ++j)
+        for(int j = 0; j < m_adjList[i].size(); ++j)
         {
             adjMatrix[i][m_adjList[i][j] - 1] = 1;
         }

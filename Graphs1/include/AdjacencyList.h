@@ -18,7 +18,6 @@ public:
 
 private:
     std::vector<std::vector<int> > m_adjList;
-    std::vector<int> m_numberOfLinks;
     int m_numOfVer;
 };
 
